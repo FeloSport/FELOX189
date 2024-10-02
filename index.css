@@ -1,0 +1,545 @@
+ /* Reset CSS */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    /* Fondo claro */
+    color: #333;
+    /* Texto oscuro para mejor legibilidad */
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    /* Fondo blanco para el encabezado */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+    width: 70px;
+    /* Ajusta el tamaño del logo */
+    height: auto;
+    /* Mantiene la proporción del logo */
+    margin-right: 10px;
+    /* Espacio entre el logo y el nombre del club */
+    vertical-align: middle;
+    /* Alinea el logo verticalmente con el texto */
+}
+
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #004a99;
+    /* Azul del Real Madrid */
+}
+
+header nav {
+    background-color: #004a99;
+    /* Fondo azul */
+    border-radius: 10px;
+    padding: 10px;
+}
+
+header nav a {
+    color: #ffffff;
+    /* Texto blanco */
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #d8b300;
+    /* Color dorado en hover */
+}
+
+/* Hero Section */
+#hero {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("media/hero.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 100px 20px;
+    text-align: center;
+    color: #ffffff;
+    /* Texto blanco */
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    /* Sombra para el texto */
+}
+
+button {
+    background-color: #004a99;
+    /* Azul oscuro */
+    border: 2px solid #d8b300;
+    /* Borde dorado */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #d8b300;
+    
+    transform: scale(1.05);
+    
+}
+
+/* Main Profile Section */
+.profile {
+display: flex;
+justify-content: space-between;
+gap: 20px; 
+}
+
+/* Info Block (left side) */
+.profile__info {
+background-color: #e0f7fa; 
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+width: 60%; 
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+font-family: 'Poppins', sans-serif; 
+}
+
+/* Títulos llamativos */
+.profile__name, h1 {
+font-size: 2.8rem;
+color: #00796b; 
+font-weight: bold;
+text-transform: uppercase; 
+letter-spacing: 1.5px; 
+margin-bottom: 20px;
+}
+
+.profile__bio-container {
+margin-top: 20px;
+}
+
+.profile__bio {
+font-size: 1.4rem;
+line-height: 1.8;
+color: #004d40; 
+font-style: italic;
+text-align: center;
+margin-bottom: 20px;
+}
+
+/* Stats Block (right side) */
+.profile__stats-container {
+background-color: #fff9c4; 
+padding: 20px;
+border-radius: 20px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+width: 35%; 
+text-align: center;
+font-family: 'Poppins', sans-serif; 
+}
+
+h1 {
+color: #d32f2f; 
+font-size: 2.5rem;
+margin-bottom: 20px;
+}
+
+.profile__stats {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+margin-top: 20px;
+}
+
+.profile__stat {
+margin-bottom: 20px;
+}
+
+.profile__stat-number {
+font-size: 3.5rem;
+font-weight: bold;
+color: #c2185b; 
+margin-bottom: 10px;
+}
+
+.profile__stat-label {
+font-size: 1.5rem;
+color: #424242; 
+}
+
+/* Layout adjustments for larger screens */
+@media screen and (max-width: 768px) {
+.profile {
+    flex-direction: column;
+}
+
+.profile__info, .profile__stats-container {
+    width: 100%;
+}
+}
+
+
+/* Trofeos Section */
+.felix{
+    color: red;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.trofeos-section {
+text-align: center;
+padding: 20px;
+}
+
+.trofeos-list {
+display: flex;
+justify-content: center;
+gap: 30px; 
+}
+
+.trofeo {
+position: relative;
+overflow: hidden;
+transition: transform 0.3s ease;
+}
+
+.trofeo img {
+width: 300px; 
+height: 200px;
+border: 5px solid #ddd; 
+border-radius: 10px; 
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trofeo h3 {
+margin-top: 10px;
+font-size: 24px; 
+color: #007bff; 
+text-transform: uppercase; 
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+transition: color 0.3s ease;
+}
+
+.trofeo:hover img {
+transform: scale(1.1); /* Efecto de zoom */
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+}
+
+.trofeo:hover h3 {
+color: #ff5733; 
+}
+
+
+/* Jugadores Section */
+.feli {
+    color: blue;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.jugadores-section {
+    display: flex;
+    padding: 50px 0;
+    background-color: #f2f2f2;
+    justify-content: space-between;
+}
+
+.entrenador {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.jugadores {
+    flex: 2;
+}
+
+.jugadores-list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.jugador {
+    width: 120px;
+    height: 190px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(12, 26, 228, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    background-color: white;
+}
+
+.jugador:hover {
+    transform: scale(1.05);
+}
+
+.jugador img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.ver-mas {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ver-mas:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Estadio Section */
+.estadio-section {
+padding: 50px 0;
+text-align: center;
+background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('ruta/a/tu/fondo.jpg') no-repeat center center;
+background-size: cover;
+color: white;
+}
+
+.estadio-image,
+.estadio-image-hover {
+width: 100%; 
+max-width: 900px; 
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+transition: opacity 0.3s ease; 
+}
+
+.estadio-image-hover {
+position: absolute; 
+top: 0;
+left: 0;
+opacity: 0; 
+transition: opacity 0.3s ease; 
+}
+
+div:hover .estadio-image {
+opacity: 0; 
+}
+
+div:hover .estadio-image-hover {
+opacity: 1; 
+}
+
+.estadio-section h2 {
+font-size: 3em;
+margin-bottom: 20px;
+text-transform: uppercase;
+letter-spacing: 2px;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+
+/* Leyendas Section */
+.leyendas-section {
+    padding: 50px 0;
+    background: linear-gradient(45deg, #f2f2f2 25%, #007bff 25%, #007bff 50%, #f2f2f2 50%, #f2f2f2 75%, #007bff 75%, #007bff 100%);
+    background-size: 28.28px 28.28px;
+}
+
+.felo {
+    background-color: #007bffc0;
+    color: rgb(253, 249, 0);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0 0 30px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.leyendas-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.leyenda {
+    width: 30%;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    background-color: white;
+}
+
+.leyenda:hover {
+    transform: scale(1.05);
+}
+
+.leyenda img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 5px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.leyenda:hover img {
+    border-color: #ff0000;
+}
+
+.leyenda h3 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: #333;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.leyenda:hover h3 {
+    color: red;
+}
+
+
+
+/* Características Section */
+#caracteristicas {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f0f8ff;
+    border: 2px solid #004a99;
+    border-radius: 10px;
+    width: 90vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    min-height: 35vh;
+}
+
+#caracteristicas h2 {
+    font-size: 2.5rem;
+    color: #004a99;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #004a99, #d8b300);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#caracteristicas ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+#caracteristicas li {
+    font-size: 1.2rem;
+    color: #004a99;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+    padding: 10px 15px;
+    border: 1px solid #004a99;
+    border-radius: 5px;
+    background-color: #ffffff;
+    max-width: 250px;
+}
+
+#caracteristicas li:hover {
+    color: #d8b300;
+    background-color: #e6f7ff;
+}
+
+#caracteristicas li::after {
+    content: attr(data-info);
+    display: none;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #be540d;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: normal;
+    font-size: 0.9rem;
+    width: 200px;
+}
+
+#caracteristicas li:hover::after {
+    display: block;
+    z-index: 10;
+}
+
+
+
+/* Final Section */
+#final {
+    background-color: #990000;
+    color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#final h2 {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .jugador,
+    .leyenda,
+    .trofeo {
+        width: 80%;
+    }
+
+    .profile__image {
+        width: 120px;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+}
+
+hr {
+    border: none;
+    height: 5px;
+    background-color: #007BFF;
+    margin: 20px 0;
+    border-radius: 10px;
+}
